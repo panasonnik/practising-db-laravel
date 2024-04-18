@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.app');
 });
 
 Route::get('/items', [Controllers\CategoryItemController::class, 'items'])->name('items');

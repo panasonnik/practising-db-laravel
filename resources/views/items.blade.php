@@ -1,6 +1,34 @@
-@foreach($items as $item)
-    <h2>{{ $item->title }}</h2>
-    <p>{{$item->description}}</p>
-    <p>{{$item->price}}</p>
-    <hr/>
-@endforeach
+@extends('layout.app')
+
+        @section('title')
+        Items
+        @endsection
+      
+        
+    @section('content')
+
+<div class="container">
+    @foreach($items as $item)
+    <div class="card">
+        <h2 class="card__title">{{ $item->title }}</h2>
+        <a href="{{ route('item', ['id'=>$item->id]) }}" class="learn-more">Learn more...</a>
+        <p class="card__description">{{ $item->description }}</p>
+        <p class="card__price">{{ $item->price }}</p>
+        <div class="card__list">
+            <ul>
+            @foreach($item->categories as $category)
+                <li class="card__list__list-item">
+                    <a href="{{ route('categoryItems', ['id' => $category->id]) }}">{{ $category->title }}</a>
+                </li>
+            @endforeach
+            </ul>
+        </div>
+    </div> 
+    @endforeach
+</div>
+
+@endsection
+
+
+
+
