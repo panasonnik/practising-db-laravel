@@ -9,4 +9,9 @@ class Status extends Model
 {
     use HasFactory;
     protected $fillable =['title'];
+
+    public function customers()
+    {
+        return $this->hasMany(Customer::class);
+    }
 }

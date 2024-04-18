@@ -11,8 +11,8 @@
         <ul class="list-links">
             <li><a href="{{ route('items') }}">Items</a></li>
             <li><a href="{{ route('categories') }}">Categories</a></li>
-            <li><a href="{{ route('items') }}">Customers</a></li>
-            <li><a href="{{ route('items') }}">Statuses</a></li>
+            <li><a href="{{ route('customers') }}">Customers</a></li>
+            <li><a href="{{ route('statuses') }}">Statuses</a></li>
         </ul>
     </div>
     <div class="content">@yield('content')</div>

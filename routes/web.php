@@ -13,3 +13,8 @@ Route::get('item/{id}',[Controllers\CategoryItemController::class, 'item'])->nam
 Route::get('category/{id}',[Controllers\CategoryItemController::class, 'category'])->name('category');
 Route::get('item/{id}/categories',[Controllers\CategoryItemController::class, 'itemCategories'])->name('itemCategories');
 Route::get('category/{id}/items',[Controllers\CategoryItemController::class, 'categoryItems'])->name('categoryItems');
+
+Route::get('customers', [Controllers\CustomerStatusController::class, 'customers'])->name('customers');
+Route::get('statuses', [Controllers\CustomerStatusController::class, 'statuses'])->name('statuses');
+Route::get('customer/{id}',[Controllers\CustomerStatusController::class, 'customer'])->name('customer');
+Route::get('status/{id}/customers', [Controllers\CustomerStatusController::class, 'statusCustomers'])->name('statusCustomers');

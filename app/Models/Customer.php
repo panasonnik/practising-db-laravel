@@ -13,4 +13,8 @@ class Customer extends Model
         'name',
         'company'
     ];
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }
