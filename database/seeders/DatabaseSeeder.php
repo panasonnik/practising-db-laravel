@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             CustomerSeeder::class,
             StatusSeeder::class,
+            CategoryItemSeeder::class,
         ]);
     }
 }
