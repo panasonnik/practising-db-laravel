@@ -17,4 +17,7 @@ class Customer extends Model
     {
         return $this->belongsTo(Status::class);
     }
+    public function items() {
+        return $this->belongsToMany(Item::class);
+    }
 }
