@@ -10,10 +10,10 @@
 <div class="container">
     @foreach($items as $item)
     <div class="card">
-        <h2 class="card__title">{{ $item->title }}</h2>
+        <h2 class="card__title">Title: {{ $item->title }}</h2>
         <a href="{{ route('item', ['id'=>$item->id]) }}" class="learn-more">Learn more...</a>
-        <p class="card__description">{{ $item->description }}</p>
-        <p class="card__price">{{ $item->price }}</p>
+        <p class="card__description">Description: {{ $item->description }}</p>
+        <p class="card__price">Price: {{ $item->price }}</p>
         <div class="card__list">
             <ul>
             @foreach($item->categories as $category)

@@ -1,13 +1,11 @@
 @extends('layout.app')
 
-        @section('title')
-        Items
-        @endsection
+@section('title') 
+Categories 
+@endsection
       
         
-    @section('content')
-
-
+@section('content')
 
 <div class="container">
 @foreach($categories as $category)

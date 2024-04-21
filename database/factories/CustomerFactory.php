@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Status;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Customer>
@@ -16,8 +17,9 @@ class CustomerFactory extends Factory
      */
     public function definition(): array
     {
+        $statuses = Status::pluck('id')->toArray(); //взяти id статусів
         return [
-            'status_id' => $this->faker->randomDigitNotNull,
+            'status_id' => $this->faker->randomElement($statuses),
             'name'=>$this->faker->name,
             'company'=>$this->faker->company,
         ];
